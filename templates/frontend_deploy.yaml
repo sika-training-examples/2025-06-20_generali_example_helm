@@ -29,9 +29,9 @@ spec:
             - name: API_ORIGIN
               value: "http://{{.Release.Name}}-backend"
             - name: FONT_COLOR
-              value: {{ .Values.frontend.FONT_COLOR }}
+              value: {{ .Values.frontend.FONT_COLOR | quote }}
             - name: BACKGROUND_COLOR
-              value: {{ .Values.frontend.BACKGROUND_COLOR }}
+              value: {{ .Values.frontend.BACKGROUND_COLOR | quote }}
           ports:
             - containerPort: 3000
           resources:
