@@ -6,7 +6,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
-  ingressClassName: openshift-default
+  ingressClassName: {{ .Values.ingressClassName }}
   tls:
     - secretName: {{ .Values.frontend.host }}-tls
       hosts:
